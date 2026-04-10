@@ -10,5 +10,6 @@ data class ProductEntity(
     val name: String,
     val icon: String,
     val image: String,
+    val video: String = "",
     val description: String,
 )

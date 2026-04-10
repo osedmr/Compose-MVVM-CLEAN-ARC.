@@ -47,6 +47,7 @@ import coil.compose.AsyncImage
 import com.galerkinrobotics.productproject.R
 import com.galerkinrobotics.productproject.core.ui.components.AppTopBar
 import com.galerkinrobotics.productproject.feature.product.domain.model.Product
+import com.galerkinrobotics.productproject.feature.product.presentation.detail.components.ProductVideoSection
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -255,6 +256,14 @@ private fun ProductDetailContent(product: Product) {
                     )
                 }
             }
+        }
+
+        if (product.video.isNotBlank()) {
+            Spacer(Modifier.height(20.dp))
+            ProductVideoSection(
+                videoPath = product.video,
+                modifier = Modifier.padding(horizontal = 16.dp),
+            )
         }
 
         Spacer(Modifier.height(88.dp))

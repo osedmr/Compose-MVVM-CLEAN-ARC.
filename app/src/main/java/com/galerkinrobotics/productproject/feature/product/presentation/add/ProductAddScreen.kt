@@ -63,6 +63,12 @@ fun ProductAddScreen(
         uri?.toString()?.let(viewModel::onIconUriChange)
     }
 
+    val pickVideo = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.PickVisualMedia(),
+    ) { uri ->
+        uri?.toString()?.let(viewModel::onVideoUriChange)
+    }
+
     LaunchedEffect(Unit) {
         viewModel.effects.collect { effect ->
             when (effect) {
@@ -180,6 +186,30 @@ fun ProductAddScreen(
                 modifier = Modifier.fillMaxWidth(),
             ) {
                 Text(stringResource(R.string.action_pick_image))
+            }
+
+            Text(
+                text = stringResource(R.string.section_video_optional),
+                style = MaterialTheme.typography.labelLarge,
+                color = MaterialTheme.colorScheme.primary,
+            )
+            if (uiState.videoUri.isNotBlank()) {
+                Text(
+                    text = stringResource(R.string.video_selected_hint),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+            Button(
+                onClick = {
+                    pickVideo.launch(
+                        PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.VideoOnly),
+                    )
+                },
+                enabled = !uiState.isSaving,
+                modifier = Modifier.fillMaxWidth(),
+            ) {
+                Text(stringResource(R.string.action_pick_video))
             }
 
             uiState.errorMessage?.let { code ->

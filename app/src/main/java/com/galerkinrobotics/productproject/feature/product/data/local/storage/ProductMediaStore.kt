@@ -36,6 +36,11 @@ class ProductMediaStore @Inject constructor(
         val mime = resolver.getType(source) ?: "image/jpeg"
         val ext = MimeTypeMap.getSingleton().getExtensionFromMimeType(mime)
             ?: when {
+                mime.startsWith("video/", ignoreCase = true) -> when {
+                    mime.contains("webm", ignoreCase = true) -> "webm"
+                    mime.contains("3gpp", ignoreCase = true) -> "3gp"
+                    else -> "mp4"
+                }
                 mime.contains("png", ignoreCase = true) -> "png"
                 mime.contains("webp", ignoreCase = true) -> "webp"
                 else -> "jpg"

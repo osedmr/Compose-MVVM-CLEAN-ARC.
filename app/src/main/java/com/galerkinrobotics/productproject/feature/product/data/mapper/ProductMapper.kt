@@ -8,6 +8,7 @@ fun ProductEntity.toDomain(): Product = Product(
     name = name,
     icon = icon,
     image = image,
+    video = video,
     description = description,
 )
 
@@ -16,5 +17,6 @@ fun Product.toEntity(): ProductEntity = ProductEntity(
     name = name,
     icon = icon,
     image = image,
+    video = video,
     description = description,
 )

@@ -10,6 +10,14 @@
     <string name="detail_delete">Sil</string>
     <string name="detail_section_about">Açıklama</string>
     <string name="detail_no_description">Açıklama eklenmemiş.</string>
+    <string name="detail_section_video">Tanıtım videosu</string>
+    <string name="detail_video_tap_hint">Tam ekran oynatmak için dokunun</string>
+    <string name="section_video_optional">Video (isteğe bağlı)</string>
+    <string name="action_pick_video">Video seç</string>
+    <string name="cd_product_video_preview">Video önizleme karesi</string>
+    <string name="cd_play_video">Videoyu oynat</string>
+    <string name="cd_close_video">Videoyu kapat</string>
+    <string name="video_selected_hint">Video seçildi</string>
     <string name="field_product_name">Ürün adı</string>
     <string name="field_description">Açıklama</string>
     <string name="section_icon">Ürün ikonu</string>

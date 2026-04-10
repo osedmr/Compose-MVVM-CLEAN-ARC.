@@ -124,6 +124,7 @@ private fun ProductListScreenPreview() {
                 name = "Örnek ürün",
                 icon = "",
                 image = "",
+                video = "",
                 description = "",
             ),
             onClick = {},

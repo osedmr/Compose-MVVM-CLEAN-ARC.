@@ -7,7 +7,7 @@ import com.galerkinrobotics.productproject.feature.product.data.local.entity.Pro
 
 @Database(
     entities = [ProductEntity::class],
-    version = 1,
+    version = 2,
     exportSchema = false,
 )
 abstract class AppDatabase : RoomDatabase() {

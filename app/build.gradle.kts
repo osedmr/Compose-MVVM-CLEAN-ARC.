@@ -76,4 +76,6 @@ dependencies {
     implementation(libs.androidx.hilt.navigation.compose)
     implementation(libs.androidx.compose.material.icons.extended)
     implementation(libs.coil.compose)
+    implementation(libs.media3.exoplayer)
+    implementation(libs.media3.ui)
 }

@@ -45,6 +45,10 @@ class ProductAddViewModel @Inject constructor(
         _uiState.update { it.copy(imageUri = uriString) }
     }
 
+    fun onVideoUriChange(uriString: String) {
+        _uiState.update { it.copy(videoUri = uriString) }
+    }
+
     fun save() {
         val name = _uiState.value.name.trim()
         if (name.isEmpty()) {
@@ -61,6 +65,7 @@ class ProductAddViewModel @Inject constructor(
                         name = name,
                         icon = s.iconUri.trim(),
                         image = s.imageUri.trim(),
+                        video = s.videoUri.trim(),
                         description = s.description.trim(),
                     ),
                 )

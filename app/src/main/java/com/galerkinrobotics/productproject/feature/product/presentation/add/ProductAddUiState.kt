@@ -6,6 +6,8 @@ data class ProductAddUiState(
     /** Seçilen ikon görseli (content URI veya yol) */
     val iconUri: String = "",
     val imageUri: String = "",
+    /** Opsiyonel tanıtım videosu */
+    val videoUri: String = "",
     val isSaving: Boolean = false,
     val errorMessage: String? = null,
 )

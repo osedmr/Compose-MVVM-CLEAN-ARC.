@@ -17,6 +17,7 @@ class ProductRepositoryImpl @Inject constructor(
         val stored = product.copy(
             icon = productMediaStore.persistUriString(product.icon),
             image = productMediaStore.persistUriString(product.image),
+            video = productMediaStore.persistUriString(product.video),
         )
         productDataSource.insertProduct(stored.toEntity())
     }
@@ -29,6 +30,7 @@ class ProductRepositoryImpl @Inject constructor(
         val stored = product.copy(
             icon = productMediaStore.persistUriString(product.icon),
             image = productMediaStore.persistUriString(product.image),
+            video = productMediaStore.persistUriString(product.video),
         )
         productDataSource.updateProduct(stored.toEntity())
     }
