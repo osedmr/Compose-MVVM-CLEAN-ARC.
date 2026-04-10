@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Product Project</string>
+    <string name="product_list_title">Ürünler</string>
+    <string name="fab_add_product">Ürün ekle</string>
+    <string name="product_list_empty">Henüz ürün yok</string>
+    <string name="error_generic">Bir şeyler ters gitti</string>
+    <string name="action_retry">Tekrar dene</string>
+    <string name="product_add_title">Yeni ürün</string>
+    <string name="product_detail_title">Ürün detayı</string>
+    <string name="detail_delete">Sil</string>
+    <string name="detail_section_about">Açıklama</string>
+    <string name="detail_no_description">Açıklama eklenmemiş.</string>
+    <string name="field_product_name">Ürün adı</string>
+    <string name="field_description">Açıklama</string>
+    <string name="section_icon">Ürün ikonu</string>
+    <string name="section_cover_image">Kapak görseli</string>
+    <string name="action_pick_icon">İkon seç</string>
+    <string name="action_pick_image">Kapak görseli seç</string>
+    <string name="action_save_product">Kaydet</string>
+    <string name="error_name_required">Ürün adı gerekli</string>
+    <string name="error_save_failed">Kayıt başarısız</string>
+    <string name="product_not_found">Ürün bulunamadı</string>
+    <string name="cd_navigate_back">Geri</string>
+    <string name="cd_delete_product">Ürünü sil</string>
+    <string name="cd_product_thumbnail">Ürün küçük görsel</string>
+    <string name="cd_product_image">Ürün görseli</string>
+    <string name="cd_selected_image">Seçilen görsel</string>
+    <string name="cd_selected_icon">Seçilen ikon</string>
+    <string name="cd_product_icon_badge">Ürün ikon rozeti</string>
+</resources>
